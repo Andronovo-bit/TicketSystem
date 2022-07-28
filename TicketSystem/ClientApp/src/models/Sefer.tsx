@@ -2,23 +2,23 @@
 export interface Sefer  {
     id: string;
     vakit: string;
-    firmaNo: string;
+    firmaNo: number;
     firmaAdi: string;
     yerelSaat: Date;
     yerelInternetSaat: Date;
     tarih: Date;
     gunBitimi: string;
     saat: Date;
-    hatNo: string;
+    hatNo: number;
     ilkKalkisYeri: string;
     sonVarisYeri: string; 
     kalkisYeri: string;
     varisYeri: string;
     ilkKalkisNoktaID: string;
     ilkKalkisNokta: string;
-    kalkisNoktaID: string;
+    kalkisNoktaID: number;
     kalkisNokta: string;
-    varisNoktaID: string;
+    varisNoktaID: number;
     varisNokta: string;
     sonVarisNoktaID: string;
     sonVarisNokta: string;
@@ -38,7 +38,7 @@ export interface Sefer  {
     seferTipiAciklamasi: string;
     hatSeferNo: string;
     oTipSinif: string;
-    seferTakipNo: string;
+    seferTakipNo: number;
     toplamSatisAdedi : number;
     dolulukKuraliVar: boolean;
     oTipOzellik: string;

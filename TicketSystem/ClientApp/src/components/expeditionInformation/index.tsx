@@ -23,6 +23,9 @@ import ChooseSeats from "../chooseSeats";
 import { useState } from "react";
 import { Sefer } from "../../models/Sefer";
 import Icon from "antd/lib/icon";
+import { GetRoutes } from "../../services/GetRoutes";
+import { GetRoute } from "../../models/GetRoute";
+import { RouteDetail } from "../../models/RouteDetail";
 
 const { Header } = Layout;
 const { Panel } = Collapse;
@@ -46,6 +49,27 @@ const ExpeditionInformation = () => {
   console.log(seferler);
 
   const [modalShow, setShowModal] = useState(false);
+  const [seferHatDetay, setseferHatDetay] = useState({} as RouteDetail[]);
+
+  const clickLineDetailHandler = (sefer: Sefer) => {
+    var getRoute = {
+      firmaNo: sefer.firmaNo,
+      hatNo: sefer.hatNo,
+      kalkisNoktaID: sefer.kalkisNoktaID,
+      varisNoktaID: sefer.varisNoktaID,
+      seferTakipNo: sefer.seferTakipNo,
+      bilgiIslemAdi: "GuzergahVerSaatli",
+      tarih: new Date(sefer.tarih).toISOString().split("T")[0],
+    } as GetRoute;
+
+    GetRoutes(getRoute).then((res: any) => {
+      if (res && res.table1) {
+        setseferHatDetay(res.table1);
+        console.log(seferHatDetay);
+        setShowModal(true);
+      }
+    });
+  };
 
   const onChange = (key: any) => {
     console.log(key);
@@ -93,7 +117,9 @@ const ExpeditionInformation = () => {
             <div className="flex items-center flex-col">
               <div className="flex items-center">
                 <UserOutlined />
-                <span className="pl-2 flex font-bold">{data.otobusKoltukYerlesimTipi}</span>
+                <span className="pl-2 flex font-bold">
+                  {data.otobusKoltukYerlesimTipi}
+                </span>
               </div>
               <span>{data.guzergah}</span>
             </div>
@@ -207,7 +233,7 @@ const ExpeditionInformation = () => {
             {seferler.map((sefer, index) => (
               <Panel header={Desing(sefer)} key={index}>
                 <div
-                  onClick={() => setShowModal(true)}
+                  onClick={() => clickLineDetailHandler(sefer)}
                   title="Esenler Otogarı - 00:00, Ataşehir Dudullu Terminali - 01:31, Gebze Otogarı - 02:31, İzmit Otogarı - 03:01, Adapazarı Otogarı - 03:31, Ankara (Aşti) Otogarı - 07:01"
                 >
                   <strong>Güzergah:</strong> Esenler Otogarı (00:00) - Ankara
@@ -249,32 +275,24 @@ const ExpeditionInformation = () => {
           </ul>
           <div>
             <h3 className="font-bold mt-[8px]">Güzergah</h3>
+
             <table className="w-full">
               <tbody>
-                <tr>
-                  <th className="text-left font-normal">00:00</th>
-                  <td>Esenler Otogarı</td>
-                </tr>
-                <tr className="bg-[#fafafa]">
-                  <th className="text-left font-normal">01:31</th>
-                  <td>Ataşehir Dudullu Terminali</td>
-                </tr>
-                <tr>
-                  <th className="text-left font-normal">02:31</th>
-                  <td>Gebze Otogarı</td>
-                </tr>
-                <tr className="bg-[#fafafa]">
-                  <th className="text-left font-normal">03:00</th>
-                  <td>İzmit Otogarı</td>
-                </tr>
-                <tr>
-                  <th className="text-left font-normal">03:30</th>
-                  <td>Adapazarı Otogarı</td>
-                </tr>
-                <tr className="bg-[#fafafa]">
-                  <th className="text-left font-normal">07:30</th>
-                  <td>Ankara (Aşti) Otogarı</td>
-                </tr>
+                {seferHatDetay.map((sefer, index) => (
+                  <tr
+                    key={index}
+                    className={index % 2 == 0 ? "bg-[#fafafa]" : ""}
+                  >
+                    <th className="text-left font-normal">
+                      {new Date(sefer.varisTarihSaat).getHours() +
+                        ":" +
+                        (new Date(sefer.varisTarihSaat).getMinutes() < 10
+                          ? "0" + new Date(sefer.varisTarihSaat).getMinutes()
+                          : new Date(sefer.varisTarihSaat).getMinutes())}
+                    </th>
+                    <td>{sefer.karaNoktaAd}</td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
