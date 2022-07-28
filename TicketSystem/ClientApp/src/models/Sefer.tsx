@@ -1,0 +1,61 @@
+
+export interface Sefer  {
+    id: string;
+    vakit: string;
+    firmaNo: string;
+    firmaAdi: string;
+    yerelSaat: Date;
+    yerelInternetSaat: Date;
+    tarih: Date;
+    gunBitimi: string;
+    saat: Date;
+    hatNo: string;
+    ilkKalkisYeri: string;
+    sonVarisYeri: string; 
+    kalkisYeri: string;
+    varisYeri: string;
+    ilkKalkisNoktaID: string;
+    ilkKalkisNokta: string;
+    kalkisNoktaID: string;
+    kalkisNokta: string;
+    varisNoktaID: string;
+    varisNokta: string;
+    sonVarisNoktaID: string;
+    sonVarisNokta: string;
+    otobusTipi: string;
+    otobusKoltukYerlesimTipi: string;
+    oTipAciklamasi: string;
+    otobusTelefonu: string;
+    otobusPlaka: string;
+    seyahatSuresi: string;
+    seyahatSuresiGosterimTipi: string;
+    yaklasikSeyahatSuresi: string;
+    biletFiyati1: number;
+    biletFiyatiInternet: number;
+    sinifFarki: number;
+    maxRzvZamani: number;
+    seferTipi: string;
+    seferTipiAciklamasi: string;
+    hatSeferNo: string;
+    oTipSinif: string;
+    seferTakipNo: string;
+    toplamSatisAdedi : number;
+    dolulukKuraliVar: boolean;
+    oTipOzellik: string;
+    normalBiletFiyati: number;
+    doluSeferMi: boolean;
+    tesisler: string;
+    seferBosKoltukSayisi: number;
+    kalkisTerminalAdi: string;
+    kalkisTerminalAdiSaatleri: string;
+    maximumRezerveTarihiSaati: Date;
+    guzergah: string;
+    kkZorunluMu: boolean;
+    biletIptalAktifMi: boolean;
+    acikParaKullanimAktifMi: boolean;
+    sefereKadarIptalEdilebilmeSuresiDakika: number;
+    firmaSeferAciklamasi: string;
+    satisYonlendirilecekMi: boolean;
+
+
+}

@@ -5,13 +5,14 @@ import { Select, Button } from 'antd';
 import background from "../../assets/spring-background-2020.png"
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { GetLocations } from '../../services/GetLocations';
 const { Option } = Select;
 
 const FindTicket = () => {
 
     const navigate = useNavigate();
-    const [from, setFrom] = useState("lucy")
-    const [to, setTo] = useState("Yiminghe")
+    const [from, setFrom] = useState("")
+    const [to, setTo] = useState("")
 
 
     const handleChange = (value: string) => {
@@ -28,8 +29,33 @@ const FindTicket = () => {
         console.log(date, dateString);
     };
 
+    const addDays = (date: any, days: number) => {
+        var result = new Date(date);
+        result.setDate(result.getDate() + days);
+        return result;
+    };
+
     const goDetail = () => {
-        navigate('/seferler')
+        GetLocations(
+            {
+                "firmaNo": "0",
+                "kalkisNoktaID": "738",
+                "varisNoktaID": "84",
+                "tarih": addDays(new Date(),1).toISOString().split("T")[0],
+                "araNoktaGelsin": 0,
+                "islemTipi": "0",
+                "yolcuSayisi": 1,
+                "ip":"127.0.0.1"
+            }
+        ).then(res => {
+            console.log(res)
+            localStorage.setItem("seferler", JSON.stringify(res))
+        }
+        ).catch(err => {
+            console.log(err)
+        }
+        )
+       // navigate('/seferler')
     }
 
     const changeLocation = () => {
