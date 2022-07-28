@@ -1,16 +1,18 @@
-import * as React from 'react';
-import { Route } from 'react-router';
-import Layout from './components/Layout';
-import Home from './components/Home';
-import Counter from './components/Counter';
-import FetchData from './components/FetchData';
+import 'antd/dist/antd.css';
+import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from './pages/home';
+import Result from './pages/result';
 
-import './custom.css'
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Home />} ></Route>
+        <Route path='seferler' element={<Result />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
 
-export default () => (
-    <Layout>
-        <Route exact path='/' component={Home} />
-        <Route path='/counter' component={Counter} />
-        <Route path='/fetch-data/:startDateIndex?' component={FetchData} />
-    </Layout>
-);
+export default App;
