@@ -7,1051 +7,1051 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TicketService
+namespace TicketSystem.TicketWebService
 {
-    
-    
+
+
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="TicketService.ServiceSoap")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName = "TicketWebService.ServiceSoap")]
     public interface ServiceSoap
     {
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/XmlIslet", ReplyAction="*")]
-        System.Threading.Tasks.Task<TicketService.XmlIsletResponse> XmlIsletAsync(TicketService.XmlIsletRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/StrIslet", ReplyAction="*")]
-        System.Threading.Tasks.Task<TicketService.StrIsletResponse> StrIsletAsync(TicketService.StrIsletRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/OtobusKalkis", ReplyAction="*")]
-        System.Threading.Tasks.Task<TicketService.OtobusKalkisResponse> OtobusKalkisAsync(TicketService.OtobusKalkisRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDOKalkis", ReplyAction="*")]
-        System.Threading.Tasks.Task<TicketService.IDOKalkisResponse> IDOKalkisAsync(TicketService.IDOKalkisRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDOVaris", ReplyAction="*")]
-        System.Threading.Tasks.Task<TicketService.IDOVarisResponse> IDOVarisAsync(TicketService.IDOVarisRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/TrenNokta", ReplyAction="*")]
-        System.Threading.Tasks.Task<TicketService.TrenNoktaResponse> TrenNoktaAsync(TicketService.TrenNoktaRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/HavaAlan", ReplyAction="*")]
-        System.Threading.Tasks.Task<TicketService.HavaAlanResponse> HavaAlanAsync(TicketService.HavaAlanRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ResmiTatilGunleri", ReplyAction="*")]
-        System.Threading.Tasks.Task<TicketService.ResmiTatilGunleriResponse> ResmiTatilGunleriAsync(TicketService.ResmiTatilGunleriRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EnYakinHavaNoktaGetir", ReplyAction="*")]
-        System.Threading.Tasks.Task<TicketService.EnYakinHavaNoktaGetirResponse> EnYakinHavaNoktaGetirAsync(TicketService.EnYakinHavaNoktaGetirRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/strEnYakinHavaNoktaGetir", ReplyAction="*")]
-        System.Threading.Tasks.Task<TicketService.strEnYakinHavaNoktaGetirResponse> strEnYakinHavaNoktaGetirAsync(TicketService.strEnYakinHavaNoktaGetirRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/EnYakinKaraNoktaGetir", ReplyAction="*")]
-        System.Threading.Tasks.Task<TicketService.EnYakinKaraNoktaGetirResponse> EnYakinKaraNoktaGetirAsync(TicketService.EnYakinKaraNoktaGetirRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/strEnYakinKaraNoktaGetir", ReplyAction="*")]
-        System.Threading.Tasks.Task<TicketService.strEnYakinKaraNoktaGetirResponse> strEnYakinKaraNoktaGetirAsync(TicketService.strEnYakinKaraNoktaGetirRequest request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/CiftBiletKontrolEt", ReplyAction="*")]
-        System.Threading.Tasks.Task<TicketService.CiftBiletKontrolEtResponse> CiftBiletKontrolEtAsync(TicketService.CiftBiletKontrolEtRequest request);
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/XmlIslet", ReplyAction = "*")]
+        System.Threading.Tasks.Task<TicketWebService.XmlIsletResponse> XmlIsletAsync(TicketWebService.XmlIsletRequest request);
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/StrIslet", ReplyAction = "*")]
+        System.Threading.Tasks.Task<TicketWebService.StrIsletResponse> StrIsletAsync(TicketWebService.StrIsletRequest request);
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/OtobusKalkis", ReplyAction = "*")]
+        System.Threading.Tasks.Task<TicketWebService.OtobusKalkisResponse> OtobusKalkisAsync(TicketWebService.OtobusKalkisRequest request);
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IDOKalkis", ReplyAction = "*")]
+        System.Threading.Tasks.Task<TicketWebService.IDOKalkisResponse> IDOKalkisAsync(TicketWebService.IDOKalkisRequest request);
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/IDOVaris", ReplyAction = "*")]
+        System.Threading.Tasks.Task<TicketWebService.IDOVarisResponse> IDOVarisAsync(TicketWebService.IDOVarisRequest request);
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/TrenNokta", ReplyAction = "*")]
+        System.Threading.Tasks.Task<TicketWebService.TrenNoktaResponse> TrenNoktaAsync(TicketWebService.TrenNoktaRequest request);
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/HavaAlan", ReplyAction = "*")]
+        System.Threading.Tasks.Task<TicketWebService.HavaAlanResponse> HavaAlanAsync(TicketWebService.HavaAlanRequest request);
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/ResmiTatilGunleri", ReplyAction = "*")]
+        System.Threading.Tasks.Task<TicketWebService.ResmiTatilGunleriResponse> ResmiTatilGunleriAsync(TicketWebService.ResmiTatilGunleriRequest request);
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/EnYakinHavaNoktaGetir", ReplyAction = "*")]
+        System.Threading.Tasks.Task<TicketWebService.EnYakinHavaNoktaGetirResponse> EnYakinHavaNoktaGetirAsync(TicketWebService.EnYakinHavaNoktaGetirRequest request);
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/strEnYakinHavaNoktaGetir", ReplyAction = "*")]
+        System.Threading.Tasks.Task<TicketWebService.strEnYakinHavaNoktaGetirResponse> strEnYakinHavaNoktaGetirAsync(TicketWebService.strEnYakinHavaNoktaGetirRequest request);
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/EnYakinKaraNoktaGetir", ReplyAction = "*")]
+        System.Threading.Tasks.Task<TicketWebService.EnYakinKaraNoktaGetirResponse> EnYakinKaraNoktaGetirAsync(TicketWebService.EnYakinKaraNoktaGetirRequest request);
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/strEnYakinKaraNoktaGetir", ReplyAction = "*")]
+        System.Threading.Tasks.Task<TicketWebService.strEnYakinKaraNoktaGetirResponse> strEnYakinKaraNoktaGetirAsync(TicketWebService.strEnYakinKaraNoktaGetirRequest request);
+
+        [System.ServiceModel.OperationContractAttribute(Action = "http://tempuri.org/CiftBiletKontrolEt", ReplyAction = "*")]
+        System.Threading.Tasks.Task<TicketWebService.CiftBiletKontrolEtResponse> CiftBiletKontrolEtAsync(TicketWebService.CiftBiletKontrolEtRequest request);
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class XmlIsletRequest
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="XmlIslet", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.XmlIsletRequestBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "XmlIslet", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.XmlIsletRequestBody Body;
+
         public XmlIsletRequest()
         {
         }
-        
-        public XmlIsletRequest(TicketService.XmlIsletRequestBody Body)
+
+        public XmlIsletRequest(TicketWebService.XmlIsletRequestBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class XmlIsletRequestBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public System.Xml.XmlElement xmlIslem;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 1)]
         public System.Xml.XmlElement xmlYetki;
-        
+
         public XmlIsletRequestBody()
         {
         }
-        
+
         public XmlIsletRequestBody(System.Xml.XmlElement xmlIslem, System.Xml.XmlElement xmlYetki)
         {
             this.xmlIslem = xmlIslem;
             this.xmlYetki = xmlYetki;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class XmlIsletResponse
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="XmlIsletResponse", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.XmlIsletResponseBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "XmlIsletResponse", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.XmlIsletResponseBody Body;
+
         public XmlIsletResponse()
         {
         }
-        
-        public XmlIsletResponse(TicketService.XmlIsletResponseBody Body)
+
+        public XmlIsletResponse(TicketWebService.XmlIsletResponseBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class XmlIsletResponseBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public System.Xml.XmlElement XmlIsletResult;
-        
+
         public XmlIsletResponseBody()
         {
         }
-        
+
         public XmlIsletResponseBody(System.Xml.XmlElement XmlIsletResult)
         {
             this.XmlIsletResult = XmlIsletResult;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class StrIsletRequest
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="StrIslet", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.StrIsletRequestBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "StrIslet", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.StrIsletRequestBody Body;
+
         public StrIsletRequest()
         {
         }
-        
-        public StrIsletRequest(TicketService.StrIsletRequestBody Body)
+
+        public StrIsletRequest(TicketWebService.StrIsletRequestBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class StrIsletRequestBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public string strislem;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 1)]
         public string stryetki;
-        
+
         public StrIsletRequestBody()
         {
         }
-        
+
         public StrIsletRequestBody(string strislem, string stryetki)
         {
             this.strislem = strislem;
             this.stryetki = stryetki;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class StrIsletResponse
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="StrIsletResponse", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.StrIsletResponseBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "StrIsletResponse", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.StrIsletResponseBody Body;
+
         public StrIsletResponse()
         {
         }
-        
-        public StrIsletResponse(TicketService.StrIsletResponseBody Body)
+
+        public StrIsletResponse(TicketWebService.StrIsletResponseBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class StrIsletResponseBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public string StrIsletResult;
-        
+
         public StrIsletResponseBody()
         {
         }
-        
+
         public StrIsletResponseBody(string StrIsletResult)
         {
             this.StrIsletResult = StrIsletResult;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class OtobusKalkisRequest
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="OtobusKalkis", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.OtobusKalkisRequestBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "OtobusKalkis", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.OtobusKalkisRequestBody Body;
+
         public OtobusKalkisRequest()
         {
         }
-        
-        public OtobusKalkisRequest(TicketService.OtobusKalkisRequestBody Body)
+
+        public OtobusKalkisRequest(TicketWebService.OtobusKalkisRequestBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class OtobusKalkisRequestBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public string ilcelerGetirilsinMi;
-        
+
         public OtobusKalkisRequestBody()
         {
         }
-        
+
         public OtobusKalkisRequestBody(string ilcelerGetirilsinMi)
         {
             this.ilcelerGetirilsinMi = ilcelerGetirilsinMi;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class OtobusKalkisResponse
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="OtobusKalkisResponse", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.OtobusKalkisResponseBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "OtobusKalkisResponse", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.OtobusKalkisResponseBody Body;
+
         public OtobusKalkisResponse()
         {
         }
-        
-        public OtobusKalkisResponse(TicketService.OtobusKalkisResponseBody Body)
+
+        public OtobusKalkisResponse(TicketWebService.OtobusKalkisResponseBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class OtobusKalkisResponseBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public System.Xml.XmlElement OtobusKalkisResult;
-        
+
         public OtobusKalkisResponseBody()
         {
         }
-        
+
         public OtobusKalkisResponseBody(System.Xml.XmlElement OtobusKalkisResult)
         {
             this.OtobusKalkisResult = OtobusKalkisResult;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class IDOKalkisRequest
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="IDOKalkis", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.IDOKalkisRequestBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "IDOKalkis", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.IDOKalkisRequestBody Body;
+
         public IDOKalkisRequest()
         {
         }
-        
-        public IDOKalkisRequest(TicketService.IDOKalkisRequestBody Body)
+
+        public IDOKalkisRequest(TicketWebService.IDOKalkisRequestBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute()]
     public partial class IDOKalkisRequestBody
     {
-        
+
         public IDOKalkisRequestBody()
         {
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class IDOKalkisResponse
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="IDOKalkisResponse", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.IDOKalkisResponseBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "IDOKalkisResponse", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.IDOKalkisResponseBody Body;
+
         public IDOKalkisResponse()
         {
         }
-        
-        public IDOKalkisResponse(TicketService.IDOKalkisResponseBody Body)
+
+        public IDOKalkisResponse(TicketWebService.IDOKalkisResponseBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class IDOKalkisResponseBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public System.Xml.XmlElement IDOKalkisResult;
-        
+
         public IDOKalkisResponseBody()
         {
         }
-        
+
         public IDOKalkisResponseBody(System.Xml.XmlElement IDOKalkisResult)
         {
             this.IDOKalkisResult = IDOKalkisResult;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class IDOVarisRequest
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="IDOVaris", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.IDOVarisRequestBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "IDOVaris", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.IDOVarisRequestBody Body;
+
         public IDOVarisRequest()
         {
         }
-        
-        public IDOVarisRequest(TicketService.IDOVarisRequestBody Body)
+
+        public IDOVarisRequest(TicketWebService.IDOVarisRequestBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class IDOVarisRequestBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public string key;
-        
+
         public IDOVarisRequestBody()
         {
         }
-        
+
         public IDOVarisRequestBody(string key)
         {
             this.key = key;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class IDOVarisResponse
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="IDOVarisResponse", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.IDOVarisResponseBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "IDOVarisResponse", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.IDOVarisResponseBody Body;
+
         public IDOVarisResponse()
         {
         }
-        
-        public IDOVarisResponse(TicketService.IDOVarisResponseBody Body)
+
+        public IDOVarisResponse(TicketWebService.IDOVarisResponseBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class IDOVarisResponseBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public System.Xml.XmlElement IDOVarisResult;
-        
+
         public IDOVarisResponseBody()
         {
         }
-        
+
         public IDOVarisResponseBody(System.Xml.XmlElement IDOVarisResult)
         {
             this.IDOVarisResult = IDOVarisResult;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class TrenNoktaRequest
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TrenNokta", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.TrenNoktaRequestBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "TrenNokta", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.TrenNoktaRequestBody Body;
+
         public TrenNoktaRequest()
         {
         }
-        
-        public TrenNoktaRequest(TicketService.TrenNoktaRequestBody Body)
+
+        public TrenNoktaRequest(TicketWebService.TrenNoktaRequestBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute()]
     public partial class TrenNoktaRequestBody
     {
-        
+
         public TrenNoktaRequestBody()
         {
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class TrenNoktaResponse
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="TrenNoktaResponse", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.TrenNoktaResponseBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "TrenNoktaResponse", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.TrenNoktaResponseBody Body;
+
         public TrenNoktaResponse()
         {
         }
-        
-        public TrenNoktaResponse(TicketService.TrenNoktaResponseBody Body)
+
+        public TrenNoktaResponse(TicketWebService.TrenNoktaResponseBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class TrenNoktaResponseBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public System.Xml.XmlElement TrenNoktaResult;
-        
+
         public TrenNoktaResponseBody()
         {
         }
-        
+
         public TrenNoktaResponseBody(System.Xml.XmlElement TrenNoktaResult)
         {
             this.TrenNoktaResult = TrenNoktaResult;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class HavaAlanRequest
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HavaAlan", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.HavaAlanRequestBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "HavaAlan", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.HavaAlanRequestBody Body;
+
         public HavaAlanRequest()
         {
         }
-        
-        public HavaAlanRequest(TicketService.HavaAlanRequestBody Body)
+
+        public HavaAlanRequest(TicketWebService.HavaAlanRequestBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.Runtime.Serialization.DataContractAttribute()]
     public partial class HavaAlanRequestBody
     {
-        
+
         public HavaAlanRequestBody()
         {
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class HavaAlanResponse
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="HavaAlanResponse", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.HavaAlanResponseBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "HavaAlanResponse", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.HavaAlanResponseBody Body;
+
         public HavaAlanResponse()
         {
         }
-        
-        public HavaAlanResponse(TicketService.HavaAlanResponseBody Body)
+
+        public HavaAlanResponse(TicketWebService.HavaAlanResponseBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class HavaAlanResponseBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public System.Xml.XmlElement HavaAlanResult;
-        
+
         public HavaAlanResponseBody()
         {
         }
-        
+
         public HavaAlanResponseBody(System.Xml.XmlElement HavaAlanResult)
         {
             this.HavaAlanResult = HavaAlanResult;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class ResmiTatilGunleriRequest
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ResmiTatilGunleri", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.ResmiTatilGunleriRequestBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "ResmiTatilGunleri", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.ResmiTatilGunleriRequestBody Body;
+
         public ResmiTatilGunleriRequest()
         {
         }
-        
-        public ResmiTatilGunleriRequest(TicketService.ResmiTatilGunleriRequestBody Body)
+
+        public ResmiTatilGunleriRequest(TicketWebService.ResmiTatilGunleriRequestBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class ResmiTatilGunleriRequestBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public string yil;
-        
+
         public ResmiTatilGunleriRequestBody()
         {
         }
-        
+
         public ResmiTatilGunleriRequestBody(string yil)
         {
             this.yil = yil;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class ResmiTatilGunleriResponse
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="ResmiTatilGunleriResponse", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.ResmiTatilGunleriResponseBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "ResmiTatilGunleriResponse", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.ResmiTatilGunleriResponseBody Body;
+
         public ResmiTatilGunleriResponse()
         {
         }
-        
-        public ResmiTatilGunleriResponse(TicketService.ResmiTatilGunleriResponseBody Body)
+
+        public ResmiTatilGunleriResponse(TicketWebService.ResmiTatilGunleriResponseBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class ResmiTatilGunleriResponseBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public System.Xml.XmlElement ResmiTatilGunleriResult;
-        
+
         public ResmiTatilGunleriResponseBody()
         {
         }
-        
+
         public ResmiTatilGunleriResponseBody(System.Xml.XmlElement ResmiTatilGunleriResult)
         {
             this.ResmiTatilGunleriResult = ResmiTatilGunleriResult;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class EnYakinHavaNoktaGetirRequest
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="EnYakinHavaNoktaGetir", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.EnYakinHavaNoktaGetirRequestBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "EnYakinHavaNoktaGetir", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.EnYakinHavaNoktaGetirRequestBody Body;
+
         public EnYakinHavaNoktaGetirRequest()
         {
         }
-        
-        public EnYakinHavaNoktaGetirRequest(TicketService.EnYakinHavaNoktaGetirRequestBody Body)
+
+        public EnYakinHavaNoktaGetirRequest(TicketWebService.EnYakinHavaNoktaGetirRequestBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class EnYakinHavaNoktaGetirRequestBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public string karaNokta;
-        
+
         public EnYakinHavaNoktaGetirRequestBody()
         {
         }
-        
+
         public EnYakinHavaNoktaGetirRequestBody(string karaNokta)
         {
             this.karaNokta = karaNokta;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class EnYakinHavaNoktaGetirResponse
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="EnYakinHavaNoktaGetirResponse", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.EnYakinHavaNoktaGetirResponseBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "EnYakinHavaNoktaGetirResponse", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.EnYakinHavaNoktaGetirResponseBody Body;
+
         public EnYakinHavaNoktaGetirResponse()
         {
         }
-        
-        public EnYakinHavaNoktaGetirResponse(TicketService.EnYakinHavaNoktaGetirResponseBody Body)
+
+        public EnYakinHavaNoktaGetirResponse(TicketWebService.EnYakinHavaNoktaGetirResponseBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class EnYakinHavaNoktaGetirResponseBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public System.Xml.XmlElement EnYakinHavaNoktaGetirResult;
-        
+
         public EnYakinHavaNoktaGetirResponseBody()
         {
         }
-        
+
         public EnYakinHavaNoktaGetirResponseBody(System.Xml.XmlElement EnYakinHavaNoktaGetirResult)
         {
             this.EnYakinHavaNoktaGetirResult = EnYakinHavaNoktaGetirResult;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class strEnYakinHavaNoktaGetirRequest
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="strEnYakinHavaNoktaGetir", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.strEnYakinHavaNoktaGetirRequestBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "strEnYakinHavaNoktaGetir", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.strEnYakinHavaNoktaGetirRequestBody Body;
+
         public strEnYakinHavaNoktaGetirRequest()
         {
         }
-        
-        public strEnYakinHavaNoktaGetirRequest(TicketService.strEnYakinHavaNoktaGetirRequestBody Body)
+
+        public strEnYakinHavaNoktaGetirRequest(TicketWebService.strEnYakinHavaNoktaGetirRequestBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class strEnYakinHavaNoktaGetirRequestBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public string karaNokta;
-        
+
         public strEnYakinHavaNoktaGetirRequestBody()
         {
         }
-        
+
         public strEnYakinHavaNoktaGetirRequestBody(string karaNokta)
         {
             this.karaNokta = karaNokta;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class strEnYakinHavaNoktaGetirResponse
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="strEnYakinHavaNoktaGetirResponse", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.strEnYakinHavaNoktaGetirResponseBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "strEnYakinHavaNoktaGetirResponse", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.strEnYakinHavaNoktaGetirResponseBody Body;
+
         public strEnYakinHavaNoktaGetirResponse()
         {
         }
-        
-        public strEnYakinHavaNoktaGetirResponse(TicketService.strEnYakinHavaNoktaGetirResponseBody Body)
+
+        public strEnYakinHavaNoktaGetirResponse(TicketWebService.strEnYakinHavaNoktaGetirResponseBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class strEnYakinHavaNoktaGetirResponseBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public string strEnYakinHavaNoktaGetirResult;
-        
+
         public strEnYakinHavaNoktaGetirResponseBody()
         {
         }
-        
+
         public strEnYakinHavaNoktaGetirResponseBody(string strEnYakinHavaNoktaGetirResult)
         {
             this.strEnYakinHavaNoktaGetirResult = strEnYakinHavaNoktaGetirResult;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class EnYakinKaraNoktaGetirRequest
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="EnYakinKaraNoktaGetir", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.EnYakinKaraNoktaGetirRequestBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "EnYakinKaraNoktaGetir", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.EnYakinKaraNoktaGetirRequestBody Body;
+
         public EnYakinKaraNoktaGetirRequest()
         {
         }
-        
-        public EnYakinKaraNoktaGetirRequest(TicketService.EnYakinKaraNoktaGetirRequestBody Body)
+
+        public EnYakinKaraNoktaGetirRequest(TicketWebService.EnYakinKaraNoktaGetirRequestBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class EnYakinKaraNoktaGetirRequestBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public string havaKod;
-        
+
         public EnYakinKaraNoktaGetirRequestBody()
         {
         }
-        
+
         public EnYakinKaraNoktaGetirRequestBody(string havaKod)
         {
             this.havaKod = havaKod;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class EnYakinKaraNoktaGetirResponse
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="EnYakinKaraNoktaGetirResponse", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.EnYakinKaraNoktaGetirResponseBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "EnYakinKaraNoktaGetirResponse", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.EnYakinKaraNoktaGetirResponseBody Body;
+
         public EnYakinKaraNoktaGetirResponse()
         {
         }
-        
-        public EnYakinKaraNoktaGetirResponse(TicketService.EnYakinKaraNoktaGetirResponseBody Body)
+
+        public EnYakinKaraNoktaGetirResponse(TicketWebService.EnYakinKaraNoktaGetirResponseBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class EnYakinKaraNoktaGetirResponseBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public string EnYakinKaraNoktaGetirResult;
-        
+
         public EnYakinKaraNoktaGetirResponseBody()
         {
         }
-        
+
         public EnYakinKaraNoktaGetirResponseBody(string EnYakinKaraNoktaGetirResult)
         {
             this.EnYakinKaraNoktaGetirResult = EnYakinKaraNoktaGetirResult;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class strEnYakinKaraNoktaGetirRequest
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="strEnYakinKaraNoktaGetir", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.strEnYakinKaraNoktaGetirRequestBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "strEnYakinKaraNoktaGetir", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.strEnYakinKaraNoktaGetirRequestBody Body;
+
         public strEnYakinKaraNoktaGetirRequest()
         {
         }
-        
-        public strEnYakinKaraNoktaGetirRequest(TicketService.strEnYakinKaraNoktaGetirRequestBody Body)
+
+        public strEnYakinKaraNoktaGetirRequest(TicketWebService.strEnYakinKaraNoktaGetirRequestBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class strEnYakinKaraNoktaGetirRequestBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public string havaKod;
-        
+
         public strEnYakinKaraNoktaGetirRequestBody()
         {
         }
-        
+
         public strEnYakinKaraNoktaGetirRequestBody(string havaKod)
         {
             this.havaKod = havaKod;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class strEnYakinKaraNoktaGetirResponse
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="strEnYakinKaraNoktaGetirResponse", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.strEnYakinKaraNoktaGetirResponseBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "strEnYakinKaraNoktaGetirResponse", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.strEnYakinKaraNoktaGetirResponseBody Body;
+
         public strEnYakinKaraNoktaGetirResponse()
         {
         }
-        
-        public strEnYakinKaraNoktaGetirResponse(TicketService.strEnYakinKaraNoktaGetirResponseBody Body)
+
+        public strEnYakinKaraNoktaGetirResponse(TicketWebService.strEnYakinKaraNoktaGetirResponseBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class strEnYakinKaraNoktaGetirResponseBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public string strEnYakinKaraNoktaGetirResult;
-        
+
         public strEnYakinKaraNoktaGetirResponseBody()
         {
         }
-        
+
         public strEnYakinKaraNoktaGetirResponseBody(string strEnYakinKaraNoktaGetirResult)
         {
             this.strEnYakinKaraNoktaGetirResult = strEnYakinKaraNoktaGetirResult;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class CiftBiletKontrolEtRequest
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="CiftBiletKontrolEt", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.CiftBiletKontrolEtRequestBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "CiftBiletKontrolEt", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.CiftBiletKontrolEtRequestBody Body;
+
         public CiftBiletKontrolEtRequest()
         {
         }
-        
-        public CiftBiletKontrolEtRequest(TicketService.CiftBiletKontrolEtRequestBody Body)
+
+        public CiftBiletKontrolEtRequest(TicketWebService.CiftBiletKontrolEtRequestBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class CiftBiletKontrolEtRequestBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public string islem;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=1)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(Order = 1)]
         public int firmaNo;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(Order=2)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(Order = 2)]
         public System.DateTime tarih;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 3)]
         public string kalkis;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 4)]
         public string varis;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=5)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 5)]
         public string yolcuAd;
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=6)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 6)]
         public string yolcuSoyad;
-        
+
         public CiftBiletKontrolEtRequestBody()
         {
         }
-        
+
         public CiftBiletKontrolEtRequestBody(string islem, int firmaNo, System.DateTime tarih, string kalkis, string varis, string yolcuAd, string yolcuSoyad)
         {
             this.islem = islem;
@@ -1063,267 +1063,267 @@ namespace TicketService
             this.yolcuSoyad = yolcuSoyad;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(IsWrapped=false)]
+    [System.ServiceModel.MessageContractAttribute(IsWrapped = false)]
     public partial class CiftBiletKontrolEtResponse
     {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Name="CiftBiletKontrolEtResponse", Namespace="http://tempuri.org/", Order=0)]
-        public TicketService.CiftBiletKontrolEtResponseBody Body;
-        
+
+        [System.ServiceModel.MessageBodyMemberAttribute(Name = "CiftBiletKontrolEtResponse", Namespace = "http://tempuri.org/", Order = 0)]
+        public TicketWebService.CiftBiletKontrolEtResponseBody Body;
+
         public CiftBiletKontrolEtResponse()
         {
         }
-        
-        public CiftBiletKontrolEtResponse(TicketService.CiftBiletKontrolEtResponseBody Body)
+
+        public CiftBiletKontrolEtResponse(TicketWebService.CiftBiletKontrolEtResponseBody Body)
         {
             this.Body = Body;
         }
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.Runtime.Serialization.DataContractAttribute(Namespace="http://tempuri.org/")]
+    [System.Runtime.Serialization.DataContractAttribute(Namespace = "http://tempuri.org/")]
     public partial class CiftBiletKontrolEtResponseBody
     {
-        
-        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
+
+        [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue = false, Order = 0)]
         public string CiftBiletKontrolEtResult;
-        
+
         public CiftBiletKontrolEtResponseBody()
         {
         }
-        
+
         public CiftBiletKontrolEtResponseBody(string CiftBiletKontrolEtResult)
         {
             this.CiftBiletKontrolEtResult = CiftBiletKontrolEtResult;
         }
     }
-    
+
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    public interface ServiceSoapChannel : TicketService.ServiceSoap, System.ServiceModel.IClientChannel
+    public interface ServiceSoapChannel : TicketWebService.ServiceSoap, System.ServiceModel.IClientChannel
     {
     }
-    
+
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Tools.ServiceModel.Svcutil", "2.0.3")]
-    public partial class ServiceSoapClient : System.ServiceModel.ClientBase<TicketService.ServiceSoap>, TicketService.ServiceSoap
+    public partial class ServiceSoapClient : System.ServiceModel.ClientBase<TicketWebService.ServiceSoap>, TicketWebService.ServiceSoap
     {
-        
+
         /// <summary>
         /// Implement this partial method to configure the service endpoint.
         /// </summary>
         /// <param name="serviceEndpoint">The endpoint to configure</param>
         /// <param name="clientCredentials">The client credentials</param>
         static partial void ConfigureEndpoint(System.ServiceModel.Description.ServiceEndpoint serviceEndpoint, System.ServiceModel.Description.ClientCredentials clientCredentials);
-        
-        public ServiceSoapClient(EndpointConfiguration endpointConfiguration) : 
+
+        public ServiceSoapClient(EndpointConfiguration endpointConfiguration) :
                 base(ServiceSoapClient.GetBindingForEndpoint(endpointConfiguration), ServiceSoapClient.GetEndpointAddress(endpointConfiguration))
         {
             this.Endpoint.Name = endpointConfiguration.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
-        
-        public ServiceSoapClient(EndpointConfiguration endpointConfiguration, string remoteAddress) : 
+
+        public ServiceSoapClient(EndpointConfiguration endpointConfiguration, string remoteAddress) :
                 base(ServiceSoapClient.GetBindingForEndpoint(endpointConfiguration), new System.ServiceModel.EndpointAddress(remoteAddress))
         {
             this.Endpoint.Name = endpointConfiguration.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
-        
-        public ServiceSoapClient(EndpointConfiguration endpointConfiguration, System.ServiceModel.EndpointAddress remoteAddress) : 
+
+        public ServiceSoapClient(EndpointConfiguration endpointConfiguration, System.ServiceModel.EndpointAddress remoteAddress) :
                 base(ServiceSoapClient.GetBindingForEndpoint(endpointConfiguration), remoteAddress)
         {
             this.Endpoint.Name = endpointConfiguration.ToString();
             ConfigureEndpoint(this.Endpoint, this.ClientCredentials);
         }
-        
-        public ServiceSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) : 
+
+        public ServiceSoapClient(System.ServiceModel.Channels.Binding binding, System.ServiceModel.EndpointAddress remoteAddress) :
                 base(binding, remoteAddress)
         {
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TicketService.XmlIsletResponse> TicketService.ServiceSoap.XmlIsletAsync(TicketService.XmlIsletRequest request)
+        System.Threading.Tasks.Task<TicketWebService.XmlIsletResponse> TicketWebService.ServiceSoap.XmlIsletAsync(TicketWebService.XmlIsletRequest request)
         {
             return base.Channel.XmlIsletAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<TicketService.XmlIsletResponse> XmlIsletAsync(System.Xml.XmlElement xmlIslem, System.Xml.XmlElement xmlYetki)
+
+        public System.Threading.Tasks.Task<TicketWebService.XmlIsletResponse> XmlIsletAsync(System.Xml.XmlElement xmlIslem, System.Xml.XmlElement xmlYetki)
         {
-            TicketService.XmlIsletRequest inValue = new TicketService.XmlIsletRequest();
-            inValue.Body = new TicketService.XmlIsletRequestBody();
+            TicketWebService.XmlIsletRequest inValue = new TicketWebService.XmlIsletRequest();
+            inValue.Body = new TicketWebService.XmlIsletRequestBody();
             inValue.Body.xmlIslem = xmlIslem;
             inValue.Body.xmlYetki = xmlYetki;
-            return ((TicketService.ServiceSoap)(this)).XmlIsletAsync(inValue);
+            return ((TicketWebService.ServiceSoap)(this)).XmlIsletAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TicketService.StrIsletResponse> TicketService.ServiceSoap.StrIsletAsync(TicketService.StrIsletRequest request)
+        System.Threading.Tasks.Task<TicketWebService.StrIsletResponse> TicketWebService.ServiceSoap.StrIsletAsync(TicketWebService.StrIsletRequest request)
         {
             return base.Channel.StrIsletAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<TicketService.StrIsletResponse> StrIsletAsync(string strislem, string stryetki)
+
+        public System.Threading.Tasks.Task<TicketWebService.StrIsletResponse> StrIsletAsync(string strislem, string stryetki)
         {
-            TicketService.StrIsletRequest inValue = new TicketService.StrIsletRequest();
-            inValue.Body = new TicketService.StrIsletRequestBody();
+            TicketWebService.StrIsletRequest inValue = new TicketWebService.StrIsletRequest();
+            inValue.Body = new TicketWebService.StrIsletRequestBody();
             inValue.Body.strislem = strislem;
             inValue.Body.stryetki = stryetki;
-            return ((TicketService.ServiceSoap)(this)).StrIsletAsync(inValue);
+            return ((TicketWebService.ServiceSoap)(this)).StrIsletAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TicketService.OtobusKalkisResponse> TicketService.ServiceSoap.OtobusKalkisAsync(TicketService.OtobusKalkisRequest request)
+        System.Threading.Tasks.Task<TicketWebService.OtobusKalkisResponse> TicketWebService.ServiceSoap.OtobusKalkisAsync(TicketWebService.OtobusKalkisRequest request)
         {
             return base.Channel.OtobusKalkisAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<TicketService.OtobusKalkisResponse> OtobusKalkisAsync(string ilcelerGetirilsinMi)
+
+        public System.Threading.Tasks.Task<TicketWebService.OtobusKalkisResponse> OtobusKalkisAsync(string ilcelerGetirilsinMi)
         {
-            TicketService.OtobusKalkisRequest inValue = new TicketService.OtobusKalkisRequest();
-            inValue.Body = new TicketService.OtobusKalkisRequestBody();
+            TicketWebService.OtobusKalkisRequest inValue = new TicketWebService.OtobusKalkisRequest();
+            inValue.Body = new TicketWebService.OtobusKalkisRequestBody();
             inValue.Body.ilcelerGetirilsinMi = ilcelerGetirilsinMi;
-            return ((TicketService.ServiceSoap)(this)).OtobusKalkisAsync(inValue);
+            return ((TicketWebService.ServiceSoap)(this)).OtobusKalkisAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TicketService.IDOKalkisResponse> TicketService.ServiceSoap.IDOKalkisAsync(TicketService.IDOKalkisRequest request)
+        System.Threading.Tasks.Task<TicketWebService.IDOKalkisResponse> TicketWebService.ServiceSoap.IDOKalkisAsync(TicketWebService.IDOKalkisRequest request)
         {
             return base.Channel.IDOKalkisAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<TicketService.IDOKalkisResponse> IDOKalkisAsync()
+
+        public System.Threading.Tasks.Task<TicketWebService.IDOKalkisResponse> IDOKalkisAsync()
         {
-            TicketService.IDOKalkisRequest inValue = new TicketService.IDOKalkisRequest();
-            inValue.Body = new TicketService.IDOKalkisRequestBody();
-            return ((TicketService.ServiceSoap)(this)).IDOKalkisAsync(inValue);
+            TicketWebService.IDOKalkisRequest inValue = new TicketWebService.IDOKalkisRequest();
+            inValue.Body = new TicketWebService.IDOKalkisRequestBody();
+            return ((TicketWebService.ServiceSoap)(this)).IDOKalkisAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TicketService.IDOVarisResponse> TicketService.ServiceSoap.IDOVarisAsync(TicketService.IDOVarisRequest request)
+        System.Threading.Tasks.Task<TicketWebService.IDOVarisResponse> TicketWebService.ServiceSoap.IDOVarisAsync(TicketWebService.IDOVarisRequest request)
         {
             return base.Channel.IDOVarisAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<TicketService.IDOVarisResponse> IDOVarisAsync(string key)
+
+        public System.Threading.Tasks.Task<TicketWebService.IDOVarisResponse> IDOVarisAsync(string key)
         {
-            TicketService.IDOVarisRequest inValue = new TicketService.IDOVarisRequest();
-            inValue.Body = new TicketService.IDOVarisRequestBody();
+            TicketWebService.IDOVarisRequest inValue = new TicketWebService.IDOVarisRequest();
+            inValue.Body = new TicketWebService.IDOVarisRequestBody();
             inValue.Body.key = key;
-            return ((TicketService.ServiceSoap)(this)).IDOVarisAsync(inValue);
+            return ((TicketWebService.ServiceSoap)(this)).IDOVarisAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TicketService.TrenNoktaResponse> TicketService.ServiceSoap.TrenNoktaAsync(TicketService.TrenNoktaRequest request)
+        System.Threading.Tasks.Task<TicketWebService.TrenNoktaResponse> TicketWebService.ServiceSoap.TrenNoktaAsync(TicketWebService.TrenNoktaRequest request)
         {
             return base.Channel.TrenNoktaAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<TicketService.TrenNoktaResponse> TrenNoktaAsync()
+
+        public System.Threading.Tasks.Task<TicketWebService.TrenNoktaResponse> TrenNoktaAsync()
         {
-            TicketService.TrenNoktaRequest inValue = new TicketService.TrenNoktaRequest();
-            inValue.Body = new TicketService.TrenNoktaRequestBody();
-            return ((TicketService.ServiceSoap)(this)).TrenNoktaAsync(inValue);
+            TicketWebService.TrenNoktaRequest inValue = new TicketWebService.TrenNoktaRequest();
+            inValue.Body = new TicketWebService.TrenNoktaRequestBody();
+            return ((TicketWebService.ServiceSoap)(this)).TrenNoktaAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TicketService.HavaAlanResponse> TicketService.ServiceSoap.HavaAlanAsync(TicketService.HavaAlanRequest request)
+        System.Threading.Tasks.Task<TicketWebService.HavaAlanResponse> TicketWebService.ServiceSoap.HavaAlanAsync(TicketWebService.HavaAlanRequest request)
         {
             return base.Channel.HavaAlanAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<TicketService.HavaAlanResponse> HavaAlanAsync()
+
+        public System.Threading.Tasks.Task<TicketWebService.HavaAlanResponse> HavaAlanAsync()
         {
-            TicketService.HavaAlanRequest inValue = new TicketService.HavaAlanRequest();
-            inValue.Body = new TicketService.HavaAlanRequestBody();
-            return ((TicketService.ServiceSoap)(this)).HavaAlanAsync(inValue);
+            TicketWebService.HavaAlanRequest inValue = new TicketWebService.HavaAlanRequest();
+            inValue.Body = new TicketWebService.HavaAlanRequestBody();
+            return ((TicketWebService.ServiceSoap)(this)).HavaAlanAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TicketService.ResmiTatilGunleriResponse> TicketService.ServiceSoap.ResmiTatilGunleriAsync(TicketService.ResmiTatilGunleriRequest request)
+        System.Threading.Tasks.Task<TicketWebService.ResmiTatilGunleriResponse> TicketWebService.ServiceSoap.ResmiTatilGunleriAsync(TicketWebService.ResmiTatilGunleriRequest request)
         {
             return base.Channel.ResmiTatilGunleriAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<TicketService.ResmiTatilGunleriResponse> ResmiTatilGunleriAsync(string yil)
+
+        public System.Threading.Tasks.Task<TicketWebService.ResmiTatilGunleriResponse> ResmiTatilGunleriAsync(string yil)
         {
-            TicketService.ResmiTatilGunleriRequest inValue = new TicketService.ResmiTatilGunleriRequest();
-            inValue.Body = new TicketService.ResmiTatilGunleriRequestBody();
+            TicketWebService.ResmiTatilGunleriRequest inValue = new TicketWebService.ResmiTatilGunleriRequest();
+            inValue.Body = new TicketWebService.ResmiTatilGunleriRequestBody();
             inValue.Body.yil = yil;
-            return ((TicketService.ServiceSoap)(this)).ResmiTatilGunleriAsync(inValue);
+            return ((TicketWebService.ServiceSoap)(this)).ResmiTatilGunleriAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TicketService.EnYakinHavaNoktaGetirResponse> TicketService.ServiceSoap.EnYakinHavaNoktaGetirAsync(TicketService.EnYakinHavaNoktaGetirRequest request)
+        System.Threading.Tasks.Task<TicketWebService.EnYakinHavaNoktaGetirResponse> TicketWebService.ServiceSoap.EnYakinHavaNoktaGetirAsync(TicketWebService.EnYakinHavaNoktaGetirRequest request)
         {
             return base.Channel.EnYakinHavaNoktaGetirAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<TicketService.EnYakinHavaNoktaGetirResponse> EnYakinHavaNoktaGetirAsync(string karaNokta)
+
+        public System.Threading.Tasks.Task<TicketWebService.EnYakinHavaNoktaGetirResponse> EnYakinHavaNoktaGetirAsync(string karaNokta)
         {
-            TicketService.EnYakinHavaNoktaGetirRequest inValue = new TicketService.EnYakinHavaNoktaGetirRequest();
-            inValue.Body = new TicketService.EnYakinHavaNoktaGetirRequestBody();
+            TicketWebService.EnYakinHavaNoktaGetirRequest inValue = new TicketWebService.EnYakinHavaNoktaGetirRequest();
+            inValue.Body = new TicketWebService.EnYakinHavaNoktaGetirRequestBody();
             inValue.Body.karaNokta = karaNokta;
-            return ((TicketService.ServiceSoap)(this)).EnYakinHavaNoktaGetirAsync(inValue);
+            return ((TicketWebService.ServiceSoap)(this)).EnYakinHavaNoktaGetirAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TicketService.strEnYakinHavaNoktaGetirResponse> TicketService.ServiceSoap.strEnYakinHavaNoktaGetirAsync(TicketService.strEnYakinHavaNoktaGetirRequest request)
+        System.Threading.Tasks.Task<TicketWebService.strEnYakinHavaNoktaGetirResponse> TicketWebService.ServiceSoap.strEnYakinHavaNoktaGetirAsync(TicketWebService.strEnYakinHavaNoktaGetirRequest request)
         {
             return base.Channel.strEnYakinHavaNoktaGetirAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<TicketService.strEnYakinHavaNoktaGetirResponse> strEnYakinHavaNoktaGetirAsync(string karaNokta)
+
+        public System.Threading.Tasks.Task<TicketWebService.strEnYakinHavaNoktaGetirResponse> strEnYakinHavaNoktaGetirAsync(string karaNokta)
         {
-            TicketService.strEnYakinHavaNoktaGetirRequest inValue = new TicketService.strEnYakinHavaNoktaGetirRequest();
-            inValue.Body = new TicketService.strEnYakinHavaNoktaGetirRequestBody();
+            TicketWebService.strEnYakinHavaNoktaGetirRequest inValue = new TicketWebService.strEnYakinHavaNoktaGetirRequest();
+            inValue.Body = new TicketWebService.strEnYakinHavaNoktaGetirRequestBody();
             inValue.Body.karaNokta = karaNokta;
-            return ((TicketService.ServiceSoap)(this)).strEnYakinHavaNoktaGetirAsync(inValue);
+            return ((TicketWebService.ServiceSoap)(this)).strEnYakinHavaNoktaGetirAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TicketService.EnYakinKaraNoktaGetirResponse> TicketService.ServiceSoap.EnYakinKaraNoktaGetirAsync(TicketService.EnYakinKaraNoktaGetirRequest request)
+        System.Threading.Tasks.Task<TicketWebService.EnYakinKaraNoktaGetirResponse> TicketWebService.ServiceSoap.EnYakinKaraNoktaGetirAsync(TicketWebService.EnYakinKaraNoktaGetirRequest request)
         {
             return base.Channel.EnYakinKaraNoktaGetirAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<TicketService.EnYakinKaraNoktaGetirResponse> EnYakinKaraNoktaGetirAsync(string havaKod)
+
+        public System.Threading.Tasks.Task<TicketWebService.EnYakinKaraNoktaGetirResponse> EnYakinKaraNoktaGetirAsync(string havaKod)
         {
-            TicketService.EnYakinKaraNoktaGetirRequest inValue = new TicketService.EnYakinKaraNoktaGetirRequest();
-            inValue.Body = new TicketService.EnYakinKaraNoktaGetirRequestBody();
+            TicketWebService.EnYakinKaraNoktaGetirRequest inValue = new TicketWebService.EnYakinKaraNoktaGetirRequest();
+            inValue.Body = new TicketWebService.EnYakinKaraNoktaGetirRequestBody();
             inValue.Body.havaKod = havaKod;
-            return ((TicketService.ServiceSoap)(this)).EnYakinKaraNoktaGetirAsync(inValue);
+            return ((TicketWebService.ServiceSoap)(this)).EnYakinKaraNoktaGetirAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TicketService.strEnYakinKaraNoktaGetirResponse> TicketService.ServiceSoap.strEnYakinKaraNoktaGetirAsync(TicketService.strEnYakinKaraNoktaGetirRequest request)
+        System.Threading.Tasks.Task<TicketWebService.strEnYakinKaraNoktaGetirResponse> TicketWebService.ServiceSoap.strEnYakinKaraNoktaGetirAsync(TicketWebService.strEnYakinKaraNoktaGetirRequest request)
         {
             return base.Channel.strEnYakinKaraNoktaGetirAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<TicketService.strEnYakinKaraNoktaGetirResponse> strEnYakinKaraNoktaGetirAsync(string havaKod)
+
+        public System.Threading.Tasks.Task<TicketWebService.strEnYakinKaraNoktaGetirResponse> strEnYakinKaraNoktaGetirAsync(string havaKod)
         {
-            TicketService.strEnYakinKaraNoktaGetirRequest inValue = new TicketService.strEnYakinKaraNoktaGetirRequest();
-            inValue.Body = new TicketService.strEnYakinKaraNoktaGetirRequestBody();
+            TicketWebService.strEnYakinKaraNoktaGetirRequest inValue = new TicketWebService.strEnYakinKaraNoktaGetirRequest();
+            inValue.Body = new TicketWebService.strEnYakinKaraNoktaGetirRequestBody();
             inValue.Body.havaKod = havaKod;
-            return ((TicketService.ServiceSoap)(this)).strEnYakinKaraNoktaGetirAsync(inValue);
+            return ((TicketWebService.ServiceSoap)(this)).strEnYakinKaraNoktaGetirAsync(inValue);
         }
-        
+
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<TicketService.CiftBiletKontrolEtResponse> TicketService.ServiceSoap.CiftBiletKontrolEtAsync(TicketService.CiftBiletKontrolEtRequest request)
+        System.Threading.Tasks.Task<TicketWebService.CiftBiletKontrolEtResponse> TicketWebService.ServiceSoap.CiftBiletKontrolEtAsync(TicketWebService.CiftBiletKontrolEtRequest request)
         {
             return base.Channel.CiftBiletKontrolEtAsync(request);
         }
-        
-        public System.Threading.Tasks.Task<TicketService.CiftBiletKontrolEtResponse> CiftBiletKontrolEtAsync(string islem, int firmaNo, System.DateTime tarih, string kalkis, string varis, string yolcuAd, string yolcuSoyad)
+
+        public System.Threading.Tasks.Task<TicketWebService.CiftBiletKontrolEtResponse> CiftBiletKontrolEtAsync(string islem, int firmaNo, System.DateTime tarih, string kalkis, string varis, string yolcuAd, string yolcuSoyad)
         {
-            TicketService.CiftBiletKontrolEtRequest inValue = new TicketService.CiftBiletKontrolEtRequest();
-            inValue.Body = new TicketService.CiftBiletKontrolEtRequestBody();
+            TicketWebService.CiftBiletKontrolEtRequest inValue = new TicketWebService.CiftBiletKontrolEtRequest();
+            inValue.Body = new TicketWebService.CiftBiletKontrolEtRequestBody();
             inValue.Body.islem = islem;
             inValue.Body.firmaNo = firmaNo;
             inValue.Body.tarih = tarih;
@@ -1331,19 +1331,19 @@ namespace TicketService
             inValue.Body.varis = varis;
             inValue.Body.yolcuAd = yolcuAd;
             inValue.Body.yolcuSoyad = yolcuSoyad;
-            return ((TicketService.ServiceSoap)(this)).CiftBiletKontrolEtAsync(inValue);
+            return ((TicketWebService.ServiceSoap)(this)).CiftBiletKontrolEtAsync(inValue);
         }
-        
+
         public virtual System.Threading.Tasks.Task OpenAsync()
         {
             return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginOpen(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndOpen));
         }
-        
+
         public virtual System.Threading.Tasks.Task CloseAsync()
         {
             return System.Threading.Tasks.Task.Factory.FromAsync(((System.ServiceModel.ICommunicationObject)(this)).BeginClose(null, null), new System.Action<System.IAsyncResult>(((System.ServiceModel.ICommunicationObject)(this)).EndClose));
         }
-        
+
         private static System.ServiceModel.Channels.Binding GetBindingForEndpoint(EndpointConfiguration endpointConfiguration)
         {
             if ((endpointConfiguration == EndpointConfiguration.ServiceSoap))
@@ -1370,7 +1370,7 @@ namespace TicketService
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }
-        
+
         private static System.ServiceModel.EndpointAddress GetEndpointAddress(EndpointConfiguration endpointConfiguration)
         {
             if ((endpointConfiguration == EndpointConfiguration.ServiceSoap))
@@ -1383,12 +1383,12 @@ namespace TicketService
             }
             throw new System.InvalidOperationException(string.Format("Could not find endpoint with name \'{0}\'.", endpointConfiguration));
         }
-        
+
         public enum EndpointConfiguration
         {
-            
+
             ServiceSoap,
-            
+
             ServiceSoap12,
         }
     }
