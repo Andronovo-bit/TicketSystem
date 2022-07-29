@@ -1,7 +1,8 @@
 {
     "development": {
         "GETLOCATION": "Ticket",
-        "GETROUTES":"Ticket/GetRouteByLine"
+        "GETROUTES":"Ticket/GetRouteByLine",
+        "GETBUS":"Ticket/GetBusDetail"
     },
     "production": {
     }
