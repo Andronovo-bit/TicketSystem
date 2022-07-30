@@ -56,5 +56,20 @@ public class IslemRezervasyonViewModel {
 
 	[XmlElement(ElementName="HatirlaticiNot")] 
 	public string HatirlaticiNot { get; set; } 
+
+	[XmlElement(ElementName="WebYolcu")]
+	public WebYolcu WebYolcu { get; set; }
 }
 
+
+public class WebYolcu { 
+
+	[XmlElement(ElementName="WebUyeNo")] 
+	public string WebUyeNo { get; set; } 
+
+	[XmlElement(ElementName="Ip")] 
+	public string Ip { get; set; } = "127.0.0.1";
+
+	[XmlElement(ElementName="Email")] 
+	public string Email { get; set; } 
+}
