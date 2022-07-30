@@ -2,10 +2,17 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
+using TicketSystem.Data.Context;
+using TicketSystem.Data.Repository;
+using TicketSystem.Manager;
+using TicketSystem.Models;
+using TicketSystem.Services;
 
 namespace TicketSystem
 {
@@ -24,15 +31,49 @@ namespace TicketSystem
             services.AddControllersWithViews();
 
             // In production, the React files will be served from this directory
-            services.AddSpaStaticFiles(configuration =>
-            {
-                configuration.RootPath = "ClientApp/build";
-            });
+            services
+                .AddSpaStaticFiles(configuration =>
+                {
+                    configuration.RootPath = "ClientApp/build";
+                });
 
-            services.AddSwaggerGen(c =>
-            {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
-            });
+            services
+                .AddSwaggerGen(c =>
+                {
+                    c
+                        .SwaggerDoc("v1",
+                        new OpenApiInfo { Title = "My API", Version = "v1" });
+                });
+
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped<ITicketService, TicketService>();
+            services.AddScoped<ITicketManager, TicketManager>();
+            
+            services
+                .AddSingleton(Configuration
+                    .GetSection("AppSettings")
+                    .Get<AppSettingsViewModel>());
+
+            services
+                .AddDbContext<TicketSystemDataContext>(options =>
+                {
+                    options
+                        .UseSqlServer(Configuration
+                            .GetConnectionString("TicketSystemConnection"),
+                        b =>
+                        {
+                            b.MigrationsAssembly("TicketSystem");
+                            b
+                                .MigrationsHistoryTable(HistoryRepository
+                                    .DefaultTableName,
+                                "dbo");
+                            b
+                                .UseQuerySplittingBehavior(QuerySplittingBehavior
+                                    .SplitQuery);
+                        });
+                });
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,29 +93,32 @@ namespace TicketSystem
 
             app.UseRouting();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller}/{action=Index}/{id?}");
-            });
+            app
+                .UseEndpoints(endpoints =>
+                {
+                    endpoints
+                        .MapControllerRoute(name: "default",
+                        pattern: "{controller}/{action=Index}/{id?}");
+                });
 
             app.UseSwagger();
 
-            app.UseSwaggerUI(c =>
-            {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
-            });
-
-            app.UseSpa(spa =>
-            {
-                spa.Options.SourcePath = "ClientApp";
-
-                if (env.IsDevelopment())
+            app
+                .UseSwaggerUI(c =>
                 {
-                    spa.UseReactDevelopmentServer(npmScript: "start");
-                }
-            });
+                    c.SwaggerEndpoint("/swagger/v1/swagger.json", "TicketAPI");
+                });
+
+            app
+                .UseSpa(spa =>
+                {
+                    spa.Options.SourcePath = "ClientApp";
+
+                    if (env.IsDevelopment())
+                    {
+                        spa.UseReactDevelopmentServer(npmScript: "start");
+                    }
+                });
         }
     }
 }
