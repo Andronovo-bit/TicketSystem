@@ -33,9 +33,11 @@ import _ from "lodash";
 
 const { Header } = Layout;
 const { Panel } = Collapse;
+const { Option } = Select;
 
 const ExpeditionInformation = () => {
   var seferlerData = JSON.parse(localStorage.getItem("seferler") || "[]");
+  var filterData = JSON.parse(localStorage.getItem("filterData") || "[]");
 
   if (seferlerData?.length == 0) {
     return (
@@ -49,17 +51,22 @@ const ExpeditionInformation = () => {
       </Row>
     );
   }
-  useEffect(() => {
-    console.log(seferlerData);
-  }, [seferlerData]);
-  var seferler = seferlerData.table as Sefer[];
+  
+  var seferler = filterData?.length == 0 ? seferlerData.table as Sefer[] : filterData;
 
-  const [modalShow, setShowModal] = useState(false);
+  const [seferModalShow, setSeferShowModal] = useState(false);
   const [seferHatDetay, setseferHatDetay] = useState({} as RouteDetail[]);
   const [busDetail, setBusDetail] = useState({} as any);
   const [busSpecial, setBusSpecial] = useState({} as any);
   const [sortPrice, setSortPrice] = useState("asc");
   const [sortTime, setSortTime] = useState("asc");
+  const [selectedSefer, setSelectedSefer] = useState({} as Sefer);
+  const [seferTipiFilter, setSeferTipiFilter] = useState();
+  const [seferFirmaFilter, setSeferFirmaFilter] = useState();
+
+  const [visible, setVisible] = useState(false);
+  const [confirmLoading, setConfirmLoading] = useState(false);
+  const [modalText, setModalText] = useState("Content of the modal");
 
   var activeSpecialty = [] as any;
 
@@ -77,7 +84,7 @@ const ExpeditionInformation = () => {
     GetRoutes(getRoute).then((res: any) => {
       if (res && res.table1) {
         setseferHatDetay(res.table1);
-        setShowModal(true);
+        setSeferShowModal(true);
       }
     });
 
@@ -156,6 +163,31 @@ const ExpeditionInformation = () => {
     localStorage.setItem("seferler", JSON.stringify(seferlerData));
   };
 
+  const filterSefer = (value: any) => {
+    if(value && value.length == 0){
+      seferlerData = JSON.parse(localStorage.getItem("seferler") || "[]");
+      localStorage.setItem("filterData", JSON.stringify([]));
+      setSeferTipiFilter(value);
+      return;
+    }
+    
+    var filteredData = _.filter(seferler, function (o: any) {
+      return o.otobusKoltukYerlesimTipi.includes(value);
+    });
+    seferlerData.table = filteredData;
+    localStorage.setItem("filterData", JSON.stringify(filteredData));
+    setSeferTipiFilter(value);
+
+  };
+  const filterSeferFirma = (value: any) => {
+    
+    var filteredData = _.filter(seferler, function (o: any) {
+      return o.firmaAdi.includes(value);
+    });
+    seferlerData.table = filteredData;
+    setSeferTipiFilter(value);
+  };
+
   const Desing = (data: Sefer): JSX.Element => {
     const priceFormat = Intl.NumberFormat("tr-TR", {
       style: "currency",
@@ -222,8 +254,11 @@ const ExpeditionInformation = () => {
           </Col>
           <Col span={4}>
             <div className="flex flex-col">
-              <Button className="bg-[#e38037] text-white uppercase rounded-[8px] hover:bg-[#e38037] hover:text-white hover:border-[#e38037]">
-                Koltuk Seç
+              <Button
+                onClick={() => bookReservation(data)}
+                className="bg-[#e38037] text-white uppercase rounded-[8px] hover:bg-[#e38037] hover:text-white hover:border-[#e38037]"
+              >
+                Rezervasyon Yap
               </Button>
               {data.seferBosKoltukSayisi < 10 ? (
                 <span className="text-center text-[#8b8181] pt-[2px]">
@@ -289,6 +324,35 @@ const ExpeditionInformation = () => {
     />
   );
 
+  const bookReservation = (data: Sefer) => {
+    console.log(data);
+    setSelectedSefer(data);
+    showModal();
+  };
+
+  const showModal = () => {
+    setVisible(true);
+  };
+
+  const handleOk = () => {
+    setModalText("The modal will be closed after two seconds");
+    setConfirmLoading(true);
+    setTimeout(() => {
+      setVisible(false);
+      setConfirmLoading(false);
+    }, 2000);
+  };
+
+  const handleCancel = () => {
+    console.log("Clicked cancel button");
+    setVisible(false);
+  };
+  
+  useEffect(() => {
+    console.log(seferlerData);
+  }, [seferlerData]);
+
+
   return (
     <>
       <section>
@@ -296,7 +360,7 @@ const ExpeditionInformation = () => {
           <div className="ant-collapse-item">
             <div className="ant-collapse-header">
               <PageHeader>
-                <Dropdown overlay={menu}>
+                <Dropdown className="mr-10" overlay={menu}>
                   <a onClick={(e) => e.preventDefault()}>
                     <Space>
                       Sırala
@@ -306,14 +370,34 @@ const ExpeditionInformation = () => {
                 </Dropdown>
                 <>
                   <Select
-                   className=""
+                    className="ml-10"
                     mode="multiple"
                     allowClear
-                    style={{ width: "25%" }}
+                    style={{ width: "15%" }}
                     placeholder="Sefer Tipi"
-                    defaultValue={["a10", "c12"]}
-                  ></Select>
+                    value={seferTipiFilter}
+                    onChange={(value) => {
+                      filterSefer(value);
+                    }}
+                  >
+                    <Option value="2+1">2+1</Option>
+                    <Option value="2+2">2+2</Option>
+                  </Select>
+                </>
 
+                <>
+                  <Select
+                    mode="multiple"
+                    allowClear
+                    style={{ width: "10%" }}
+                    placeholder="Firmaya Göre"
+                    value={seferFirmaFilter}
+                    onChange={(e) => {
+                      filterSeferFirma(e);
+                    }}
+                  >
+                    <Option value="37">İnci Turizim</Option>
+                  </Select>
                 </>
               </PageHeader>
             </div>
@@ -322,7 +406,7 @@ const ExpeditionInformation = () => {
 
         <Row>
           <Collapse defaultActiveKey={["1"]} onChange={onChange}>
-            {seferler?.map((sefer, index) => (
+            {seferler?.map((sefer:any, index:number) => (
               <Panel header={Desing(sefer)} key={index}>
                 <div
                   onClick={() => clickLineDetailHandler(sefer)}
@@ -346,11 +430,12 @@ const ExpeditionInformation = () => {
             ))}
           </Collapse>
         </Row>
+
         <Modal
           title="Sefer Detayları"
-          visible={modalShow}
+          visible={seferModalShow}
           footer={null}
-          onCancel={() => setShowModal(false)}
+          onCancel={() => setSeferShowModal(false)}
         >
           <h3 className="font-bold mt-[8px]">Uyarı</h3>
           <p className="leading-[16px]">
@@ -406,6 +491,18 @@ const ExpeditionInformation = () => {
                   : null}
               </tbody>
             </table>
+          </div>
+        </Modal>
+
+        <Modal
+          title="Rezervasyon"
+          visible={visible}
+          onOk={handleOk}
+          confirmLoading={confirmLoading}
+          onCancel={handleCancel}
+        >
+          <div className="justify-center flex justify-center mt-10">
+            <ChooseSeats {...selectedSefer} />
           </div>
         </Modal>
       </section>
