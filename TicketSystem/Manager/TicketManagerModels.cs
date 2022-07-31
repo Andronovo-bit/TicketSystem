@@ -887,7 +887,7 @@ public class Segment {
 	public int TasiyiciFirma { get; set; } 
 
 	[XmlElement(ElementName="AracTipi")] 
-	public int AracTipi { get; set; } 
+	public string AracTipi { get; set; } 
 
 	[XmlElement(ElementName="Sinif")] 
 	public string Sinif { get; set; } 

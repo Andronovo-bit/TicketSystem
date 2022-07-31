@@ -46,7 +46,6 @@ namespace TicketSystem.Services
 
         public async Task<IslemSonuc> BuyTicketAsync(IslemRezervasyonViewModel buyTicketViewModel)
         {
-            buyTicketViewModel.WebYolcu = new WebYolcu();
             var resultRezervation =  await _ticketManager.CreateRezervation(buyTicketViewModel);
 
             if(!resultRezervation.Sonuc) throw new Exception(resultRezervation.Mesaj);

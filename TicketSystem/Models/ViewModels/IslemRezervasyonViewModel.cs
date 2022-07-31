@@ -65,7 +65,7 @@ public class IslemRezervasyonViewModel {
 public class WebYolcu { 
 
 	[XmlElement(ElementName="WebUyeNo")] 
-	public string WebUyeNo { get; set; } 
+	public int WebUyeNo { get; set; } 
 
 	[XmlElement(ElementName="Ip")] 
 	public string Ip { get; set; } = "127.0.0.1";
