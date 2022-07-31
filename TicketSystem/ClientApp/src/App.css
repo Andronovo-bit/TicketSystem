@@ -115,3 +115,45 @@
   padding: 24px;
   background-color: #f5f5f5;
 }
+
+.table-inform th {
+  text-align: start;
+  padding: 12px;
+  
+}
+
+.passanger-inform td {
+  padding: 12px;
+}
+
+.transform-information.table-inform th {
+  text-align: start;
+  padding: 12px;
+
+  
+}
+
+.transform-information.passanger-inform td{
+  text-align: start;
+  padding: 12px;
+  
+}
+
+
+.transform-information, .passanger-inform, .first-box{
+  border: 1px solid #eeecec;
+}
+
+.pass-information.t-inform {
+  font-weight: normal;
+}
+
+.ticket-button {
+  border-radius: 15px;
+}
+
+@media print {
+  body.print-element *:not(.print) {
+    display: none;
+  }
+}
