@@ -1,14 +1,13 @@
-import FindTicket from "../../components/findTicket"
+import FindTicket from "../../components/findTicket";
 
 const Home = () => {
 
 
-    return (
-        <>
-            <FindTicket />
-          
-        </>
-    )
-}
+  return (
+    <>
+      <FindTicket />
+    </>
+  );
+};
 
-export default Home
+export default Home;
