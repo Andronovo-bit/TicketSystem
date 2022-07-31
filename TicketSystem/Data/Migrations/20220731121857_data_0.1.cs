@@ -23,7 +23,7 @@ namespace TicketSystem.Data.Migrations
                     KoltukNo = table.Column<string>(type: "varchar(10)", nullable: true),
                     Isim = table.Column<string>(type: "varchar(200)", nullable: true),
                     SoyIsim = table.Column<string>(type: "varchar(200)", nullable: true),
-                    TcNo = table.Column<int>(type: "int", nullable: false),
+                    TcNo = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Cinsiyet = table.Column<int>(type: "int", nullable: false),
                     InsertDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     UpdateDate = table.Column<DateTime>(type: "datetime2", nullable: false),

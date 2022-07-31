@@ -60,8 +60,8 @@ namespace TicketSystem.Data.Migrations
                     b.Property<string>("SoyIsim")
                         .HasColumnType("varchar(200)");
 
-                    b.Property<int>("TcNo")
-                        .HasColumnType("int");
+                    b.Property<string>("TcNo")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdateDate")
                         .HasColumnType("datetime2");

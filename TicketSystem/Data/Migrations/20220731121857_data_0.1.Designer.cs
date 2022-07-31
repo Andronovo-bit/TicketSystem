@@ -12,7 +12,7 @@ using TicketSystem.Data.Context;
 namespace TicketSystem.Data.Migrations
 {
     [DbContext(typeof(TicketSystemDataContext))]
-    [Migration("20220729152909_data_0.1")]
+    [Migration("20220731121857_data_0.1")]
     partial class data_01
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -62,8 +62,8 @@ namespace TicketSystem.Data.Migrations
                     b.Property<string>("SoyIsim")
                         .HasColumnType("varchar(200)");
 
-                    b.Property<int>("TcNo")
-                        .HasColumnType("int");
+                    b.Property<string>("TcNo")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("UpdateDate")
                         .HasColumnType("datetime2");

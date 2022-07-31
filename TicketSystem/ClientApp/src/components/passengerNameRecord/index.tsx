@@ -30,6 +30,7 @@ const PassengerNameRecord = () => {
         console.log(data);
       })
       .catch((err) => {
+        alert("Pnr sorgulanırken bir hata oluştu.");
         console.log(err);
       });
     console.log(values);

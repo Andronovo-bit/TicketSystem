@@ -50,9 +50,11 @@ const ChooseSeats = (props: Sefer) => {
 
     MakeRezervation(rezervationModel)
       .then((data) => {
+        alert("Rezervasyonunuz başarıyla oluşturuldu. Pnr: " + data.pnr);
         console.log(data);
       })
       .catch((err) => {
+        alert("Rezervasyonunuz oluşturulurken bir hata oluştu.");
         console.log(err);
       });
   };
