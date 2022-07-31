@@ -8,7 +8,7 @@ Bu proje Gidiş, varış noktalarının ve tarih seçilmesi ile otobüs seferlen
 
 ## Kullanılan Yapılar
 
-- .Net 6 (Entity Framework, In-Memory Cache, Dependecy Injection, Options Pattern, Generic Repository, Code-First)
+- .Net 6 (Entity Framework, In-Memory Cache, Dependecy Injection, Options Pattern, Generic Repository, UnitOfWork Pattern, Code-First)
 - React (Typescript, Tailwind, AntDesign, PostCss)
 
 

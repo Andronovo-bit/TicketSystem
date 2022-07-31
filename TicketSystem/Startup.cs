@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Migrations;
@@ -10,6 +10,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi.Models;
 using TicketSystem.Data.Context;
 using TicketSystem.Data.Repository;
+using TicketSystem.Data.UnitOfWork;
 using TicketSystem.Manager;
 using TicketSystem.Models;
 using TicketSystem.Services;
@@ -46,6 +47,7 @@ namespace TicketSystem
                 });
 
             services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();;
             services.AddScoped<ITicketService, TicketService>();
             services.AddScoped<ITicketManager, TicketManager>();
             
@@ -53,6 +55,8 @@ namespace TicketSystem
                 .AddSingleton(Configuration
                     .GetSection("AppSettings")
                     .Get<AppSettingsViewModel>());
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
 
             services
                 .AddDbContext<TicketSystemDataContext>(options =>
