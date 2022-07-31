@@ -2,7 +2,10 @@
     "development": {
         "GETLOCATION": "Ticket",
         "GETROUTES":"Ticket/GetRouteByLine",
-        "GETBUS":"Ticket/GetBusDetail"
+        "GETBUS":"Ticket/GetBusDetail",
+        "GETTRANSFERPOINT":"Ticket/GetTransferPoint",
+        "BUYTICKET":"Ticket/BuyTicket",
+        "QUERYPNR":"Ticket/QueryPNR"
     },
     "production": {
     }
